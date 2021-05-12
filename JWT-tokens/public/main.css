@@ -1,0 +1,283 @@
+.navbar {
+    background-color: white;
+}
+.containerLogoSignIn{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+}
+.containerSignIn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.signInBtn{
+    background-color: inherit;
+    outline: none;
+    border: none;
+    margin-right: 50px;
+}
+
+.signIn{
+    outline: none;
+    border: none;
+    background-color: white;
+}
+.logInContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 14px;
+}
+.logInContainer>div{
+    margin-right: 6px;
+}
+.logInContainer>div>input{
+    border-radius: 10px;
+    border-width: thin;
+    outline: none;
+}
+.logInContainer>div>button:hover{
+    color: red;
+}
+.bodyimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.searchImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.search {
+    margin: 3% 42% 0 33%;
+    width: 35%;
+    position: relative;
+    opacity: 0.94;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+
+.headbets{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filter:focus,
+.filter:active,
+.signInBtn:focus,
+.signInBtn:active{
+    outline: none;
+}
+.imageContainer {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.containerButton {
+    display: flex;
+    justify-content: center;
+}
+
+.containerButton > button {
+    font-size: 20px;
+    margin: 7px 8px 5px 13px;
+    outline: white;
+    border: none;
+    background-color: inherit;
+}
+.newbetform {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20% 3% 20%;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+.footer-container > span {
+    font-family: unset;
+    margin: 14px;
+}
+
+.containerbets {
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+
+}
+
+.betsList {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    max-width: 690px;
+    border: outset;
+    border-color: black;
+    border-width: 1px;
+}
+.likesDislikes>button{
+    border: none;
+    outline: none;
+    background-color: white;
+}
+.betDateViews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.betDateViews>div{
+    font-size: 13px;
+    margin: 2px 4px 3px 2px;
+}
+
+.containerFullInfobet{
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    max-width: 950px;
+}
+.fullInfobet{
+    display: flex;
+    flex-direction: column;
+    margin: 22px;
+}
+.fullInfobetFooter{
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+}
+.fullInfobetFooter>div{
+    margin-right: 6px;
+}
+.bet{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: white;
+}
+.bet>div{
+    width: 50%;
+    margin:5px
+}
+.bet-image{
+    border-radius: 5px;
+}
+.bet-info{
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+    border: #ff0000;
+}
+hr{
+    width: 100%;
+    margin: 0;
+}
+.readMore{
+    border: none;
+    background-color: white;
+    outline: none;
+}
+.readMore:hover{
+    color:red;
+    cursor: pointer;
+}
+.readMore:focus,
+.readMore:active{
+    outline: none;
+}
+.containerNextPred10bets{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.containerNextPred10bets>button{
+    padding: 0 20px 14px 20px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+.containerNextPred10bets>button:hover{
+    color: red;
+}
+.containerComments{
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    max-width: 950px;
+}
+.commentsOpen{
+    max-width: 950px;
+    border: none;
+    background: white;
+    padding: 10px;
+    outline: none;
+}
+.commentsOpen:hover{
+    color: red;
+}
+.comments{
+    display: flex;
+    flex-direction: row;
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+    margin: 18px;
+    border-style: solid;
+    border-width: thin;
+    padding: 6px;
+    border-radius: 7px;
+}
+.comment>div{
+    margin: 3px;
+}
+.comment-author-date{
+    display: flex;
+    flex-direction: row;
+}
+.comment-author-date>div{
+    margin: 2px 4px 3px 0;
+
+}
+
+#layer1 {
+    width: 100%; /* Ширина первого слоя */
+    padding: 10px; /* Поля вокруг текста */
+    background: #fc0; /* Цвет фона */
+}
+#layer2 {
+    width: 100%; /* Ширина второго слоя */
+    background: #fc0; /* Цвет фона */
+    padding: 10px; /* Поля вокруг параграфа */
+    font-style: italic;
+}
+#layer3 {
+    background: #fc0; /* Цвет фона третьего слоя */
+    padding: 10px; /* Поля вокруг текста */
+    font-style: italic;
+}
+#layer4 {
+    background: rgb(64, 204, 51); /* Цвет фона третьего слоя */
+    padding: 10px; /* Поля вокруг текста */
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center
+}
