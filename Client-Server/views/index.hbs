@@ -1,0 +1,77 @@
+<h2>Ваши ставки на матчи испанской Ла-Лиги</h2>
+{{#if todos.length}}
+<table id="myTable">
+    <tr>
+        <th onclick="sortTable(0)">Матч вашей ставки</th>
+        <th onclick="sortTable(1)">Поставили на клуб</th>
+        <th onclick="sortTable(2)">Статус</th>
+        <th onclick="sortTable(3)">Дата</th>
+    </tr> 
+  {{#each todos}}
+  <tr class="todo">
+    <form action="/complete" method="POST">
+      <label>
+        {{#if completed}} 
+            <input type="hidden" value="{{_id}}" name="id">                                       
+            <td><strike>{{title}}</strike></td>
+            <td><strike>{{message}}</strike></td>
+            <td><strike>{{status}}</strike></td>
+            <td><strike>{{date}}</strike></td>
+        {{else}} 
+                <input type="hidden" value="{{_id}}" name="id">             
+               <td>{{title}}</td>
+               <td>{{message}}</td>
+               <td>{{status}}</td>
+               <td>{{date}}</td> 
+        {{/if}}
+        <td>
+              <button style="float: right;" name="save" class="btn btn-small" type="submit">Save</button>
+            </td>  
+      </label>
+    </form>
+  </tr>
+  {{/each}}
+</table> 
+{{else}}
+<p>No todos!</p>
+{{/if}}
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {      
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+ 

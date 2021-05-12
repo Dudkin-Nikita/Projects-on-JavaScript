@@ -1,0 +1,20 @@
+<nav class="blue darken-4">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Ставки на матчи Ла-Лиги</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      {{#if isIndex}}
+      <li class="active"><a href="/">Ваши ставки</a></li>
+      {{else}}
+      <li><a href="/">Ваши ставки</a></li>
+      {{/if}}
+
+      {{#if isCreate}}
+      <li class="active"><a href="/create">Новая ставка</a></li>
+      {{else}}
+      <li><a href="/create">Новая ставка</a></li>
+      {{/if}}
+
+    </ul>
+  </div>
+</nav>

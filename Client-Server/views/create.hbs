@@ -1,0 +1,30 @@
+<form action="/create" method="POST">
+  <h2>Новая ставка</h2>
+
+<div class="input-field">
+        <input type="text" name="title" required placeholder="Матч вашей ставки" >
+    </div>
+    <div class="input-field">
+        <textarea type="text" name="message"  required placeholder="На какой клуб ставите"
+        style="resize:vertical;
+        min-height:150px"
+        ></textarea>
+    </div>
+    <p>
+        <label>
+            <input name="status_order" id="shipped" type="radio"  value="Shipped" checked />
+        <span>Shipped</span>
+        </label>
+    </p>
+    <p>
+        <label>
+            <input name="status_order" id="cancelled" type="radio" value="Cancelled" />
+        <span>Cancelled</span>
+        </label>
+    </p>
+    <div>
+        <input type="date" class="datepicker" max="2022-01-09"  name="date" required >
+    </div>
+    
+    <button type="submit" class="btn" style="margin-top:20px;">Create</button> 
+</form>
