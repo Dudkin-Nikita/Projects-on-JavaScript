@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/index.css">
+  <title>Ставки на матчи испанской Ла-Лиги</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+    <div><img class="bodyimage"
+              src="Bets.jpg"
+              width="700" height="350" alt=""></div>
+</div>
+<div class="container pt-3" id="app" v-cloak>
+  <h1>Ставки на матчи испанской Ла-Лиги</h1>
+
+  <form class="form-inline mb-3" @submit.prevent="createBet">
+    <div class="form-group mr-5">
+      <label for="name" class="mr-3">Имя</label>
+      <input type="text" class="form-control" id="name" v-model="form.name">
+    </div>
+    <div class="form-group mr-5">
+      <label for="value" class="mr-3">Значение</label>
+      <input type="text" class="form-control" id="value" v-model="form.value">
+    </div>
+      <button class="btn-good" type="submit" :disabled="!canCreate">Создать</button>
+  </form>
+
+  <div v-if="loading">
+    <loader />
+  </div>
+  <div v-else-if="bets.length">
+    <div class="card mb-3" v-for="bet in bets">
+      <div class="card-body">
+        <h5 class="card-title" :style="{color: bet.marked ? 'red' : 'black'}">{{bet.name}}</h5>
+        <p class="card-text">{{bet.value}}</p>
+        <button class="btn btn-primary" @click="markBet(bet.id)" :disabled="bet.marked">Отметить</button>
+        <button class="btn btn-danger" @click="removeBet(bet.id)">Удалить</button>
+      </div>
+    </div>
+  </div>
+  <p v-else>Ставок пока нет</p>
+  <hr>
+    <footer>
+        <div class="footer-container">
+            <div id="layer1">Дудкин Никита Александрович</div>
+            <div id="layer2">email: nikd926@gmail.com</div>
+            <div id="layer3">phone: +375444657803</div>
+            <div id="layer4">Ставки на футбольные матчи первого дивизиона испанской футбольной лиги позволят вам выйграть немалую сумму денег!!!Постаьте на победу своей любимой команды в матче с принципиальным соперником и наслаждайтесь</div>
+            <span>&copy; Copyright 2021, BSUIR</span>
+        </div>
+    </footer>
+</div>
+
+<script type="module" src="frontend.js"></script>
+</body>
+</html>

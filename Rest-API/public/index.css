@@ -1,0 +1,41 @@
+.bodyimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.container pt-3 {
+    margin-left: auto;
+    margin-right: auto
+}
+
+h1 {
+    text-align: center
+}
+
+.btn-good{
+    background: green; /* Синий цвет фона */ 
+    color: black; /* Белые буквы */ 
+}
+
+#layer1 {
+    width: 100%; /* Ширина первого слоя */
+    padding: 10px; /* Поля вокруг текста */
+    background: #fc0; /* Цвет фона */
+}
+#layer2 {
+    width: 100%; /* Ширина второго слоя */
+    background: #fc0; /* Цвет фона */
+    padding: 10px; /* Поля вокруг параграфа */
+    font-style: italic;
+}
+#layer3 {
+    background: #fc0; /* Цвет фона третьего слоя */
+    padding: 10px; /* Поля вокруг текста */
+    font-style: italic;
+}
+#layer4 {
+    background: rgb(64, 204, 51); /* Цвет фона третьего слоя */
+    padding: 10px; /* Поля вокруг текста */
+    font-weight: bold;
+}
